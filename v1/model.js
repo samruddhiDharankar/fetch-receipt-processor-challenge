@@ -4,36 +4,32 @@ function calculatePoints(receipt) {
 
   // Add points based on the number of alphanumeric characters in the retailer name
   points += checkAlphanumeric(receipt.retailer);
-  console.log("points checkAlphanumeric ", points);
 
   // Add points if the total is a round dollar amount
   if (checkDollarAmount(receipt.total)) {
     points += 50;
   }
-  console.log("points checkDollarAmount ", points);
 
   // Add points if the total is a multiple of 0.25
   if (checkTotalMultiple(receipt.total)) {
     points += 25;
   }
-  console.log("points checkTotalMultiple ", points);
 
   // Add points based on the number of items (5 points for every 2 items)
   points += 5 * parseInt(receipt.items.length / 2);
-  console.log("points 5 points for every 2 items ", points);
+
   // Add points based on the trimmed length of item descriptions
   points += TrimLength(receipt.items);
-  console.log("points trimmed ", points);
+
   // Add points if the purchase date is an odd day
   if (checkOddDay(receipt.purchaseDate)) {
     points += 6;
   }
-  console.log("points odd ", points);
+
   // Add points if the purchase time is between 02:00 and 04:00
   if (checkPurchaseTime(receipt.purchaseTime)) {
     points += 10;
   }
-  console.log("points time ", points);
 
   return points;
 }

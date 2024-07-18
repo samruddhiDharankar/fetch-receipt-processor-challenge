@@ -28,7 +28,6 @@ router.get("/receipts/:id/points", (req, res) => {
 
 // Submit a receipt for processing
 router.post("/receipts/process", (req, res) => {
-  console.log(req.body);
   const { retailer, purchaseDate, purchaseTime, items, total } = req.body;
 
   // Check if any required fields are missing
@@ -74,7 +73,7 @@ router.post("/receipts/process", (req, res) => {
   };
 
   receipts.push(newReceipt); // Add the new receipt to the array
-  console.log(receipts);
+
   res.status(201).json({ id: newReceipt.id }); // Return the ID of the new receipt
 });
 
