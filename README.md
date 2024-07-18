@@ -7,7 +7,7 @@ git clone https://github.com/samruddhiDharankar/fetch-receipt-processor-challeng
 cd fetch-receipt-processor-challenge
 ```
 
-2. Build the Docker image:
+2. Start Docker Enginer & Build the Docker image:
 
 ```
 docker build -t fetch-receipt-processor .
