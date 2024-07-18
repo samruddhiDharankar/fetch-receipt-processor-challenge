@@ -16,7 +16,7 @@ docker build -t fetch-receipt-processor .
 3. Run the Docker container:
 
 ```
-docker run -p 5000:5000 fetch-receipt-processor
+docker run -p 3000:3000 fetch-receipt-processor
 ```
 
 4. Go to postman
