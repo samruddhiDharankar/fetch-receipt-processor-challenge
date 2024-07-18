@@ -19,8 +19,7 @@ docker build -t fetch-receipt-processor .
 docker run -p 3000:3000 fetch-receipt-processor
 ```
 
-4. Go to postman
-   Hit the api endpoint :: submit a receipt for processing
+4. Open Postman and hit the api endpoint :: submit a receipt for processing
 
 ```
 curl --location 'http://localhost:3000/api/v1/receipts/process' \
